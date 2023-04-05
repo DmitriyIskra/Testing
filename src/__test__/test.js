@@ -29,29 +29,29 @@ test('calculateTotal sum', () => {
 
 
 // --------------------------------------------------------------------------
-// import calculateCashback from '../cashback.js';
+import calculateCashback from '../cashback.js';
 
-// test('cashback at sum: 500', () => {
-//     const result = calculateCashback(500);
+test('cashback at sum: 500', () => {
+    const result = calculateCashback(500);
 
-//     expect(result).toBe(0)
-// })
+    expect(result).toBe(0)
+})
 
-// const dataList = [      //   Массив из массивов в которых которые будут передаваться в функцию 
-//     ['gold', 100000, 5000],
-//     ['silver', 10000, 200],
-//     ['regular', 1000, 10],
-//     ['no', 500, 0]
-// ]
+const dataList = [      //   Массив из массивов в которых которые будут передаваться в функцию 
+    ['gold', 100000, 5000],
+    ['silver', 10000, 200],
+    ['regular', 1000, 10],
+    ['no', 500, 0]
+]
 
-// const handler = test.each(dataList);
+const handler = test.each(dataList);
 
 //handler(prefix, (status, amount, expected)             прим:      gold   100000  5000
-// handler('testing cashback function with %s status and %i amount', (status, amount, expected) => {    
-//     const result = calculateCashback(amount); // Вставляем общую сумму покупок
+handler('testing cashback function with %s status and %i amount', (status, amount, expected) => {    
+    const result = calculateCashback(amount); // Вставляем общую сумму покупок
     
-//     expect(result).toBe(expected);
-// })
+    expect(result).toBe(expected);
+})
 
 
 
